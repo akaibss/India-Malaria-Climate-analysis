@@ -14,3 +14,7 @@ Version Control: Github
 Malaria Incidence Data: World Health Organization (Global Health Observatory), via World Bank (2026) — processed by Our World in Data. "Incidence of malaria (per 1,000 population at risk)".
 Climate Data: "Climate Change Indicators: A Comprehensive Dataset (2000–2024)". Authored by Bhadra Mohit. Published on Kaggle (2024).
 Methodology: Malaria incidence is reported as new cases per 1,000 population at risk (SDG indicator 3.3.3). Climatic variables are recorded in degrees Celsius (°C) and annual rainfall in millimeters (mm).
+### Methodoligies and Technical challenges 
+SQL Limitations: Initial data extraction and preparation were performed in BigQuery. During the process, SQL based filtering and sorting became inefficient for managing the complex, multi-source mapping required for climate and incidence variables.
+Transition to Google Sheets: To ensure data integrity, the workflow transitioned to Google Sheets. This environment allowed for advanced data integration using INDEX and MATCH formulas to align longitudinal climate trends (2000–2024) with malaria incidence rates.
+Data Cleaning & Consolidation: Google Sheets was used to standardize datasets, resolve null values, and create a "Master" analysis sheet. This process enabled the decoupling of variables to successfully identify that public health intervention efficacy has overridden climatic variability in recent years.
